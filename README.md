@@ -60,6 +60,8 @@ This experiment intentionally stops at the **decision boundary**.
 
 When a request is marked as `REQUIRE_APPROVAL`, the system does not attempt to automate the human decision. The goal here is not to simulate human judgment, but to demonstrate **where execution must pause and responsibility transfers from the system to a human operator**.
 
+**This differs from typical human-in-the-loop designs by intent, not by accident: the system pauses before execution, not after output.**
+
 This repository focuses on *where to stop*, not *how humans decide*.
 
 Designing how humans review, override, or approve such requests—and how that decision is recorded as accountable evidence—is considered a separate problem space and is out of scope for this repository.
