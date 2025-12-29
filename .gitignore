@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+# Experiment outputs
+experiments/baseline_A/baseline_results.json
+experiments/control_enabled_B/control_enabled_results.json
+experiments/comparison_summary.json
+
+# Runtime artifacts
+control_layer/approval/queue.json
+control_layer/audit/events.json

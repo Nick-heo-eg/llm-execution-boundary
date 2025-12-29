@@ -1,0 +1,28 @@
+version: "1.0"
+name: "Example Execution Control Policy"
+
+rules:
+  - rule_id: "block_sensitive_external"
+    condition:
+      data_class: "sensitive"
+      destination: "external"
+    action: "BLOCK"
+    reason: "Sensitive data blocked from external destination"
+
+  - rule_id: "require_approval_pii"
+    condition:
+      contains_pii: true
+    action: "REQUIRE_APPROVAL"
+    reason: "PII processing requires approval"
+
+  - rule_id: "log_confidential"
+    condition:
+      data_class: "confidential"
+    action: "LOG_ONLY"
+    reason: "Confidential data usage logged"
+
+  - rule_id: "allow_public"
+    condition:
+      data_class: "public"
+    action: "ALLOW"
+    reason: "Public data allowed"
